@@ -37,7 +37,7 @@ class Todo(db.Model):
 def home():
     todo_list = Todo.query.all()
     container_id = socket.gethostname()
-    h1_color = os.environ.get("H1_COLOR", "black")
+    h1_color = os.environ.get("H1_COLOR", "red")
     return render_template("base.html", todo_list=todo_list, h1_color=h1_color, container_id=container_id)
 
 
